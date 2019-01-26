@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO List</title>
+    <link rel="icon" href="./download.png">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" type="text/CSS">
+    <script src="./todo_list.js"></script>
+    <link rel="stylesheet" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <p class="text-center display-2" style="font-family:cursive;">TODO Application</p> <br><br>
+        <form class="inline-form" action="" name="myform" id="ftodo">
+            <div class="form-group row">
+                <div class="col-1"></div>
+                <label class="col-2" for="item"><b>Item Name :</b> </label>
+                <input type="text" class="form-control col-6" name="iname" id="iname" placeholder="Item Name">
+            </div>
+            <div class="form-group row">
+                <div class="col-1"></div>
+                <label class="col-2" for="item"><b>Category :</b> </label>
+                <select class="col-6" name="category" id="category">
+                    <option value="Select Category">Select Category</option>
+                    <option value="Meeting">Meeting</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Marraige">Marraige</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <div class="col-1"></div>
+                <label class="col-2" for="item"><b>Priority :</b> </label>
+                <select class="col-6" name="priority" id="priority">
+                    <option value="Select Category">Select Priority</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+            <div class="text-center">
+                <button type="button" onclick="add()"class="btn btn-success">Add</button>
+                <button type="button" onclick="fclear()" class="btn btn-secondary">Clear</button>
+                <button type="button" id="updt" class="d-none">Update</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-5">
+        <table id="todo" class="table table-hover">
+            <tr>
+                <th>Item Name</th>
+                <th>Category</th>
+                <th>Priority</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
